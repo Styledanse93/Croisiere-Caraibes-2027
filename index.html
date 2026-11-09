@@ -44,6 +44,16 @@
   footer{text-align:center;font-size:.78rem;color:#5b7482;padding:1rem}
   .offline-ok{display:none;background:#e2f6e2;color:#1d6b2e;font-size:.8rem;text-align:center;padding:.35rem}
   @media (min-width:640px){header h1{font-size:1.9rem}}
+    img {
+      /* S'adapte à l'écran sans déformation ni agrandissement flou */
+      max-width: 100%;
+      max-height: 75vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
 </style>
 </head>
 <body>
@@ -64,6 +74,10 @@
     <h2>Vue d'ensemble du voyage</h2>
     <p class="escale">MSC World Europa 5★ Plus · Vols réguliers directs · Pension complète</p>
     <ul>
+	<img
+      src="MSC_World_Europa_-_Saint-Nazaire_-_June_2022.jpg"
+      alt="Le paquebot MSC World Europa au large de Saint-Nazaire, juin 2022"
+      decoding="async">
       <li><strong>Vol aller :</strong> Paris → Fort-de-France (Martinique)</li>
       <li><strong>7 nuits à bord</strong> en formule Easy All Inclusive « Tout à Volonté »</li>
       <li><strong>Escales :</strong> Pointe-à-Pitre · Journée en mer · Philipsburg · St John's · Basseterre · Roseau · Fort-de-France</li>
