@@ -231,10 +231,11 @@ const JOURS = [
     pts:[
       "Petit-déjeuner et collations pendant le vol.",
       "Arrivée à Paris dans la matinée.",
-      "Fin du voyage — et souvenirs plein la tête !"
+      "Fin du voyage — et souvenirs plein la tête !",
+	  "Merci à tous et à bientôt sur un prochain voyage.",	  
     ],
     h:["Arrivée Paris dans la matinée"],
-    conseil:"Sevran-Seniors et Style Danse93 vous remercient pour votre participation, et vous donnent rendez-vous pour le prochain voyage."
+    // conseil:"Sevran-Seniors et Style Danse93 vous remercient pour votre participation, et vous donnent rendez-vous pour le prochain voyage."
   }
 ];
 
@@ -694,7 +695,7 @@ function afficher(i){
         <div class="horaires">${j.h.map((h,k)=>'<span class="pastille'+(k>0?' dep':'')+'">'+(k===0?'⏰ '+h:h)+'</span>').join('')}</div>
         ${j.meteo?'<div class="meteo" id="meteo">⏳ Météo du jour…</div>':''}
         ${j.lien?'<button class="pdf-lien" onclick="afficher(\''+j.lien+'\')">'+j.lienTexte+'</button>':''}
-        <div class="conseil"><strong>💡 Bon à savoir :</strong> ${j.conseil}</div>
+        ${j.conseil?'<div class="conseil"><strong>💡 Bon à savoir :</strong> '+j.conseil+'</div>':''}
       </section>`;
     chargerMeteo(j);
   }
